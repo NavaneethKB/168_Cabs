@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet"> -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+ 
+
+	<script src="https://kit.fontawesome.com/5b1503190b.js" crossorigin="anonymous"></script>
+
+
+    <meta charset="UTF-8">
+
+    <title>Sign Up</title>
+	<link rel="stylesheet" href="user_auth_style.css">
+</head>
+	<script>
+	const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+
+
+function fun2(){
+	const container = document.getElementById('container');
+	container.classList.remove("right-panel-active");
+}
+
+
+function fun1(){
+	const container = document.getElementById('container');
+	container.classList.add("right-panel-active");
+	
+}
+	</script>
+
+
+
+<script src="user_auth.js"></script>
+
+<header>
+	
+	  
+	
+	  
+</header>
+
+<body>
+	<header id="header" class="fixed-top d-flex align-items-center">
+		<div class="container2 d-flex align-items-center">
+		 
+	   
+	   <a href="index.html" class="logo me-auto"><img src="assets/img/taxi_logo.png" alt=""></a>
+	
+		  <nav id="navbar" class="navbar order-last order-lg-0">
+			<ul >
+			  <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+			  <li><a class="nav-link scrollto" href="#about">About</a></li>
+			  
+			  
+			  <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+			</ul>
+		  
+		  </nav>
+	
+		</div>
+	  </header>
+	<!-- <div class="topnav">
+		<img class="topleft" src="assets/img/taxi_logo.png">
+		
+	
+		<a href="#contact">Contact</a>
+		<a href="#about">About</a>
+		<a class="active" href="#home">Home</a>
+	  </div> -->
+<div class="container" id="container">
+
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<img style="height: 65px; width: 65px;" src="assets/img/taxi_2.png">
+			<h4>Create an account with <a style="font-weight: bold;
+				font-size: 23px; text-decoration: none; color: #EB4D4B;">168 Cabs</a></h4>
+		 <!-- <div class="social-container">
+				<a href="#" class="social-1"><i class="fab fa-facebook-f"></i></a>
+				
+				<a href="#" class="social-2"><i class="fab fa-google"></i></a>
+				<a href="#" class="social-3"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span> -->
+			<input id="signup_name" type="text" placeholder="Name" />
+			<input  id="signup_email" type="email" placeholder="Email" />
+			<input id="signup_password" type="password" placeholder="Password" />
+			<input id="signup_number" type="text" placeholder="Phone Number" />
+			<button id="si" onclick="signup()" >Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+
+		<form action="#">
+			<img style="height: 65px; width: 65px;" src="assets/img/taxi_1.png">
+			<h1>Log In</h1>
+			<h4 style="padding: 0; margin: 0;">to get started with booking</h3>
+			<!-- <div class="social-container">
+				<a href="#" class="social-1"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social-2"><i class="fab fa-google"></i></a>
+				<a href="#" class="social-3"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span> -->
+			<input id="signin_email" type="email" placeholder="Email" />
+			<input id="signin_password" type="password" placeholder="Password" />
+			<a href="#">Forgot your password?</a>
+			<button onclick="signin()" id="signin1" >Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1> Already having an account ?</h1>
+				<h5> Please Log In with your credetials </h5>
+				<button onclick="fun2()" class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>New to <a style="font-weight: bold;
+				font-size: 27px; text-decoration: none; color: #EB4D4B;">168 Cabs</a>?</h1>
+				<h5>Enter following credetials to get started </h5>
+				<button  onclick="fun1()"class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="alert" class="alert hide ">
+<span class="fas fa-exclamation-circle"></span>
+<span id="alert_message">Waring!This message is waring</span>
+<span onclick="close_alert" id ="close_btn"class="close-btn">
+<span class="fas fa-times" onclick="close_alert"></span>
+</span>
+</div>
+</div>
+</body>
+</html>
+
